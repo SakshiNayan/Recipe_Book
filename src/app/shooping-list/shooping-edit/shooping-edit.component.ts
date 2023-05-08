@@ -50,6 +50,11 @@ export class ShoopingEditComponent implements OnInit, OnDestroy {
     this.editMode = false;
   }
 
+  onDelete(){
+    this.slService.deleteIngredient(this.editedItemIndex);
+    this.onClear();
+  }
+
   ngOnDestroy(): void {
     this.subcription.unsubscribe(); //cleanup the notification
   }
