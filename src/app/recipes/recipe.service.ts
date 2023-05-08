@@ -1,11 +1,12 @@
-import { EventEmitter, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { Recipe } from "./recipes.module";
 import { Ingredient } from "../shared/ingredient.module";
 import { ShoppingListService } from "../shooping-list/shopping-list.service";
+//import { Subject } from "rxjs";
 
 @Injectable()
 export class RecipeService{
-    recipeSelected =new EventEmitter<Recipe>();
+    //recipeSelected =new Subject<Recipe>();
     //private bcz we can't directly access this array from outside
     private recipes: Recipe[] =[
         new Recipe(
