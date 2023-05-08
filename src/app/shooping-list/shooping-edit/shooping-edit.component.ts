@@ -45,6 +45,11 @@ export class ShoopingEditComponent implements OnInit, OnDestroy {
     form.reset(); // for reset the form after adding items
   }
 
+  onClear(){
+    this.slForm.reset();
+    this.editMode = false;
+  }
+
   ngOnDestroy(): void {
     this.subcription.unsubscribe(); //cleanup the notification
   }
